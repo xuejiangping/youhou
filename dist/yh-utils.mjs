@@ -1,5 +1,10 @@
+//#region src/utils/sayHello.js
+function e(e = "World") {
+	return `Hello, ${e}!`;
+}
+//#endregion
 //#region src/utils/index.js
-function e({ method: e, url: t, timeout: n }) {
+function t({ method: e, url: t, timeout: n }) {
 	return new Promise((r, i) => {
 		if (typeof GM_xmlhttpRequest < "u") GM_xmlhttpRequest({
 			method: e,
@@ -21,6 +26,6 @@ function e({ method: e, url: t, timeout: n }) {
 		});
 	});
 }
-console.log("99999999", 99999999);
+console.log("YHUtils loaded");
 //#endregion
-export { e as request_yh };
+export { t as request_yh, e as sayHello };

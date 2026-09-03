@@ -1,5 +1,5 @@
 
-
+export * from './sayHello.js';
 export function request_yh({
   method,
   url,
@@ -31,4 +31,4 @@ export function request_yh({
 
 }
 
-console.log('99999999',99999999)
+console.log('YHUtils loaded')
