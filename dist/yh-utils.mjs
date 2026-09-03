@@ -1,4 +1,4 @@
-//#region utils/index.js
+//#region src/utils/index.js
 function e({ method: e, url: t, timeout: n }) {
 	return new Promise((r, i) => {
 		if (typeof GM_xmlhttpRequest < "u") GM_xmlhttpRequest({
@@ -21,5 +21,6 @@ function e({ method: e, url: t, timeout: n }) {
 		});
 	});
 }
+console.log("99999999", 99999999);
 //#endregion
 export { e as request_yh };
