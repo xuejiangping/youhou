@@ -1,6 +1,7 @@
 {
 	"scripts": {
-		"build": "vite build"
+		"build": "vite build",
+		"deploy:utils": "pnpm build;git commit -am 'build utils';git push"
 	},
 	"devDependencies": {
 		"vite": "^8.2.2"
