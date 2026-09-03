@@ -3,12 +3,16 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
+    outDir: 'dist/utils',
+
     lib: {
+
       entry: resolve(import.meta.dirname,'./src/utils/index.js'),
       // 这是库的“全局”名称
       name: 'YHUtils',
       // 将添加适当的扩展名后缀
       fileName: 'yh-utils',
+      formats: ['umd'],
 
 
     },

@@ -1,5 +1,5 @@
 
-import { sayHello } from '../utils/index.js';
+
 const url1 = 'http://106.12.9.249:1234/xjp';
 const url2 = 'http://106.12.9.249:1234/yh-test1';
 
@@ -15,4 +15,3 @@ YHUtils.request_yh({
 }).catch(err => {
   console.log('err',err)
 })
-sayHello('YHScript')

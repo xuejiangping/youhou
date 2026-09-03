@@ -1,7 +1,10 @@
 {
+	"type": "module",
 	"scripts": {
-		"build": "vite build",
-		"deploy:utils": "pnpm build && git add . && git commit -m 'build utils' && git push"
+		"build:utils": "vite build --config vite.config.utils.js",
+		"build:yhscript": "vite build --config vite.config.yhscript.js",
+		"deploy:utils": "pnpm build:utils && git add . && git commit -m 'build utils' && git push",
+		"aaa": "echo 999"
 	},
 	"devDependencies": {
 		"vite": "^8.2.2"
