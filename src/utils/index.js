@@ -1,16 +1,10 @@
 
 export * from './sayHello.js';
-export function request_yh({
-  method,
-  url,
-  timeout
-}) {
+export function request_yh(options) {
   return new Promise((resolve,reject) => {
     if (typeof GM_xmlhttpRequest !== 'undefined') {
       GM_xmlhttpRequest({
-        method,
-        url,
-        timeout,
+        ...options,
         onload: function (res) {
           resolve(res)
         },
@@ -22,9 +16,7 @@ export function request_yh({
         }
       });
     } else {
-      return fetch({
-        method,url,
-      })
+      return fetch(options)
     }
   })
 
