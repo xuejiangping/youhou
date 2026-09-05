@@ -6,7 +6,8 @@
 		"build:yhscript:raw": "vite build --config vite.config.yhscript.raw.js",
 		"watch:yhscript": "vite build --config vite.config.yhscript.js --watch",
 		"deploy:utils": "pnpm build:utils && git add . && git commit -m 'build utils' && git push",
-		"deploy:yhscript": "pnpm build:yhscript:raw && git add . && git commit -m 'build yhscript' && git push",
+		"deploy:yhscript": "pnpm build:yhscript && git add . && git commit -m 'build yhscript' && git push",
+		"deploy:yhscript:raw": "pnpm build:yhscript:raw && git add . && git commit -m 'build yhscript raw' && git push",
 		"aaa": "echo 999"
 	},
 	"devDependencies": {
