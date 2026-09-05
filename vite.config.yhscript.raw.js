@@ -14,7 +14,6 @@ export default defineConfig({
 
     lib: {
       entry,
-      fileName: 'webhook-test.user',
       formats: ['es'],
     },
     rolldownOptions: {
