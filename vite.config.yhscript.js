@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  mode: 'development',
   build: {
     outDir: 'dist/webhook-test',
+
     lib: {
       entry: ['src/webhook-test/index.js'],
       name: 'YHScript',
