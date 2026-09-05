@@ -17,8 +17,7 @@ function sayHello(name = "World") {
 //#region src/scripts/webhook-test/features/webhook.js
 function initWebhook() {
 	console.log("测试脚本， hello world !");
-	alert("测试脚本， hello world 0.2!");
-	sayHello("webhook test!");
+	sayHello("webhook test 0.3!");
 }
 //#endregion
 //#region src/scripts/webhook-test/index.js
