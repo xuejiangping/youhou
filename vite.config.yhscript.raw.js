@@ -1,7 +1,9 @@
 // 用于油猴脚本源码的打包配置，保留源码中的注释和格式
 import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
-const dirName = 'watch-input'
+// const dirName = 'watch-input'
+const dirName = 'webhook-test'
+
 const entry = `src/scripts/${dirName}/index.js`
 const outDir = `dist/${dirName}`
 const source = readFileSync(entry,'utf8')
