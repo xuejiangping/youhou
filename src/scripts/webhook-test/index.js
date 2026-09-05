@@ -10,7 +10,7 @@
 // @license MIT
 
 // ==/UserScript==
-import { } from './features/webhook.js';
+import { initWebhook } from './features/webhook.js';
 (function () {
   'use strict'
 
