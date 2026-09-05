@@ -1,4 +1,5 @@
 
+export * from './GamepadController.js';
 export * from './sayHello.js';
 export function request_yh(options) {
   return new Promise((resolve,reject) => {
