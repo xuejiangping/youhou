@@ -62,9 +62,12 @@ export class GamepadController extends EventTarget {
 
         // Check axis movements
         for (let k = 0; k < gamepad.axes.length; k++) {
-          this.dispatchEvent(new CustomEvent(GamepadController.AxisMove,{
-            detail: [gamepad.index,k,gamepad.axes[k]]
-          }));
+          if (gamepad.axes[k] !== 0) {
+            this.dispatchEvent(new CustomEvent(GamepadController.AxisMove,{
+              detail: [gamepad.index,k,gamepad.axes[k]]
+            }));
+          }
+
         }
       }
     }
