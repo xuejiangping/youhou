@@ -3,15 +3,12 @@ import { defineConfig } from 'vite'
 const entry = 'src/scripts/watch-input/'
 
 export default defineConfig({
-  mode: 'development',
   build: {
     outDir: 'dist/watch-input',
-
+    minify: 'oxc',
     lib: {
       entry: [entry],
-      name: 'YHScript',
-
-      formats: ['umd'],
+      formats: ['es'],
       // 将添加适当的扩展名后缀
       // fileName: (format,name) => `${name}.${format}.js`
 

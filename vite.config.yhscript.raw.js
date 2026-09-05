@@ -7,7 +7,6 @@ const source = readFileSync(entry,'utf8')
 const userscriptHeader = source.match(/^\/\/ ==UserScript==[\s\S]*?^\/\/ ==\/UserScript==\s*/m)?.[0] ?? ''
 
 export default defineConfig({
-  mode: 'development',
   build: {
     outDir: 'dist/webhook-test',
     // 禁用压缩和代码混淆
