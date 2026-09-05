@@ -1,3 +1,3 @@
 export function sayHello(name = 'World') {
-  return `Hello, ${name}!`;
+  console.log(`Hello, ${name}!`);
 }
