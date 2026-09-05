@@ -2,9 +2,9 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
-    outDir: 'dist/a',
+    outDir: 'dist/webhook-test',
     lib: {
-      entry: ['src/a/index.js'],
+      entry: ['src/webhook-test/index.js'],
       name: 'YHScript',
 
       formats: ['umd'],

@@ -1,0 +1,1 @@
+(function(e){typeof define==`function`&&define.amd?define([],e):e()})(function(){function e(e=`World`){return`Hello, ${e}!`}(function(){"use strict";console.log(`测试脚本， hello world !`),alert(`测试脚本， hello world !`),e(`webhook test!`)})()});
