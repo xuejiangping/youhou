@@ -1,12 +1,14 @@
+// 用于油猴脚本中 @require的打包配置
 import { defineConfig } from 'vite'
+const entry = 'src/scripts/watch-input/'
 
 export default defineConfig({
   mode: 'development',
   build: {
-    outDir: 'dist/webhook-test',
+    outDir: 'dist/watch-input',
 
     lib: {
-      entry: ['src/webhook-test/index.js'],
+      entry: [entry],
       name: 'YHScript',
 
       formats: ['umd'],

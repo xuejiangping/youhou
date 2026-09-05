@@ -10,11 +10,9 @@
 // @license MIT
 
 // ==/UserScript==
-import { sayHello } from '../utils/sayHello.js';
-
+import { } from './features/webhook.js';
 (function () {
-  'use strict';
-  console.log('测试脚本， hello world !')
-  alert('测试脚本， hello world 0.2!')
-  sayHello('webhook test!')
-})();
+  'use strict'
+
+  initWebhook()
+})()
