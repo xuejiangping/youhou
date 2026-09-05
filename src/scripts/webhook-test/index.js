@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         webhook test hello world !
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  webhook测试脚本!
 // @author       xuejiangping
 // @match        *://www.baidu.com/*
