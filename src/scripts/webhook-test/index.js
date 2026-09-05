@@ -9,10 +9,8 @@
 // @grant        none
 // @license MIT
 
-// ==/UserScript==
-import { initWebhook } from './features/webhook.js';
-(function () {
-  'use strict'
 
-  initWebhook()
-})()
+// ==/UserScript==
+import { initWebhook } from "./features/webhook"
+
+initWebhook()
