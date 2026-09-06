@@ -99,6 +99,53 @@ pnpm build:utils
 
 使用 `@grant GM_xmlhttpRequest` 时，确保公共工具包或脚本运行环境已经提供对应的油猴 API。
 
+## 通过 Greasy Fork 同步脚本
+
+以 `webhook-test` 为例，先构建 raw 脚本：
+
+```bash
+# 编辑 vite.config.yhscript.raw.js，将 dirName 设置为 webhook-test
+pnpm build:yhscript:raw
+```
+
+构建完成后，将 `dist/webhook-test/index.js` 推送到 GitHub 的 `main` 分支。该文件的 raw 地址为：
+
+```text
+https://raw.githubusercontent.com/xuejiangping/youhou/main/dist/webhook-test/index.js
+```
+
+在 Greasy Fork 的脚本管理页面中：
+
+1. 打开“代码同步”或“源代码同步”设置。
+2. 将上面的 raw 地址粘贴到脚本代码来源 URL。
+3. 首次配置时选择“手动”同步并执行一次同步，确认脚本名称、版本和 UserScript 元数据显示正确。
+4. 确认无误后，将同步方式改为“自动”或“Webhook”。
+
+每次发布前都应先构建，再提交并推送产物：
+
+```bash
+pnpm build:yhscript:raw
+git add dist/webhook-test/index.js
+git commit -m "build webhook-test"
+git push origin main
+```
+
+## Webhook 自动同步示例
+
+选择 Greasy Fork 的“Webhook”同步方式后，按照页面显示的 Webhook 地址配置 GitHub 仓库：
+
+1. 打开 GitHub 仓库的 `Settings > Webhooks`，点击 `Add webhook`。
+2. 将 Greasy Fork 提供的 Webhook 地址填入 `Payload URL`。
+3. `Content type` 选择 `application/json`，事件选择仅推送 `Push events`。
+4. 如果 Greasy Fork 页面提供了 Secret，将同一个 Secret 填入 GitHub；否则保持默认设置。
+5. 保存后向 `main` 分支推送 `dist/webhook-test/index.js`，再回到 Greasy Fork 查看同步结果。
+
+Webhook 只负责触发 Greasy Fork 检查代码，脚本内容仍然来自上面的 raw 地址。因此仓库中的文件路径、分支和 Greasy Fork 配置必须保持一致。可以先在 GitHub 的 Webhook 页面使用 `Recent Deliveries` 检查请求是否成功，再在 Greasy Fork 管理页面确认版本已更新。
+
+### Greasy Fork 配置截图
+
+![Greasy Fork Webhook 同步配置](docs/images/greasyfork-webhook-sync.png)
+
 ## 部署命令
 
 以下命令会构建、提交并推送 Git 变更，请确认远程仓库和 Git 状态后再执行：
