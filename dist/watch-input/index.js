@@ -14,6 +14,24 @@
 
 
 (function() {
+	//#region src/utils/HotReload.js
+	var HotReload = class {
+		ws_url;
+		ws;
+		constructor({ ws_url }) {
+			this.ws_url = ws_url;
+			this.ws = new WebSocket(this.ws_url);
+			this.ws.addEventListener("message", (e) => {
+				try {
+					const { type } = JSON.parse(e.data);
+					if (type == "reload") location.reload();
+				} catch (error) {
+					console.error(error);
+				}
+			});
+		}
+		createConnection() {}
+	};
 	var url3 = "http://106.12.9.249:1234/yh-get-input";
 	console.log("YHUtils", YHUtils);
 	var WatchInput = class {
@@ -48,8 +66,8 @@
 			url: url3
 		});
 	}
-	//#endregion
-	//#region src/scripts/watch-input/index.js
+	new HotReload({ ws_url: "wss://localhost:1234" });
 	initWatchInput();
+	console.log("2222222", 2222222);
 	//#endregion
 })();

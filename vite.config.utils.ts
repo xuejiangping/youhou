@@ -6,7 +6,7 @@ export default defineConfig({
 
     lib: {
 
-      entry: resolve(import.meta.dirname,'./src/utils/index.js'),
+      entry: resolve(import.meta.dirname, './src/utils/index.js'),
       // 这是库的“全局”名称
       name: 'YHUtils',
       // 将添加适当的扩展名后缀

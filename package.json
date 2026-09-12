@@ -28,7 +28,7 @@
 		"build:all": "pnpm build:utils && pnpm build:yhscript && pnpm build:yhscript:raw",
 		"build:utils": "vite build --config vite.config.utils.js",
 		"build:yhscript": "vite build --config vite.config.yhscript.js",
-		"build:yhscript:raw": "vite build --config vite.config.yhscript.raw.js",
+		"build:yhscript:raw": "vite build --config vite.config.yhscript.raw.ts",
 		"watch:yhscript": "pnpm build:yhscript --watch",
 		"watch:yhscript:raw": "pnpm build:yhscript:raw --watch",
 		"deploy:utils": "pnpm build:utils && git add . && git commit -m 'build utils' && git push",

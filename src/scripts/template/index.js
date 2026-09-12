@@ -1,12 +1,11 @@
 // ==UserScript==
-// @name         watch input
+// @name         template
 // @namespace    http://tampermonkey.net/
 // @version      2026-08-27
-// @description  watch input!
+// @description  模版!
 // @author       xuejiangping
 // @match        https://www.baidu.com/
 // @match         http://127.0.0.1
-// @match        https://www.douyin.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @grant        GM_xmlhttpRequest
 // @require      https://xuejiangping.github.io/youhou/dist/utils/yh-utils.umd.cjs?a=1
@@ -15,4 +14,3 @@
 
 import { initWatchInput } from './features/WatchInput.js';
 initWatchInput()
-console.log('2222222',2222222)
