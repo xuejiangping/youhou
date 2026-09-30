@@ -36,6 +36,7 @@
 		"deploy:yhscript:raw": "pnpm build:yhscript:raw && git add . && git commit -m 'build yhscript raw' && git push"
 	},
 	"devDependencies": {
+		"@types/node": "^22.20.2",
 		"vite": "^8.2.2"
 	}
 }

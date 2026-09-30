@@ -68,6 +68,5 @@
 	}
 	new HotReload({ ws_url: "wss://localhost:1234" });
 	initWatchInput();
-	console.log("2222222", 2222222);
 	//#endregion
 })();

@@ -19,9 +19,5 @@ export class HotReload {
     })
   }
 
-  createConnection() {
-
-  }
-
 
 }

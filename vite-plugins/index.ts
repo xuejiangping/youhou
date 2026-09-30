@@ -1,3 +1,4 @@
+import { exec } from "node:child_process"
 import { readFileSync } from "node:fs"
 import { Plugin } from "vite"
 
@@ -35,5 +36,12 @@ export function preserveHotReload(entry: string): Plugin {
         }
       }
     },
+    closeBundle() {
+      const cmd = `curl 'https://localhost:1234/reload' -d '' -k`
+      exec(cmd, (err, stdout, stderr) => {
+        if (err) console.error(`preserveHotReload 错误：` + err)
+
+      })
+    }
   }
 }

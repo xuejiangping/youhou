@@ -15,4 +15,3 @@
 
 import { initWatchInput } from './features/WatchInput.js';
 initWatchInput()
-console.log('2222222',2222222)
